@@ -1,0 +1,370 @@
+/* ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+   ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+
+   1. 1024px et moins
+
+   ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+   ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+ */
+
+@media (max-width: 1024px) {
+    /* Styles du projet unique */
+    .single-projet-team {
+      padding-top: 15dvh;
+    }
+  
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+       Styles du header et du menu - Tablette et mobile
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+    .header.menu--open::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: var(--color-dark-blue);
+      z-index: 700;
+    }
+    .header__nav {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+      z-index: 800;
+      transition: all 0.4s ease;
+    }
+    .header__nav.open,
+    .header__secondary-nav.open {
+      display: flex;
+    }
+    .header__menu {
+      flex-direction: column;
+      gap: var(--spacing-lg);
+      align-items: flex-start;
+      font-size: 1.5rem;
+    }
+    .header__secondary-nav {
+      display: none;
+      background-color: var(--color-dark-blue);
+      z-index: 1000;
+      position: fixed;
+      bottom: 5dvh;
+      left: 15dvw;
+    }
+    .header__menu-toggle {
+      display: flex;
+    }
+    .header__nav {
+      display: none;
+      position: absolute;
+      top: 50vh;
+      width: 90vw;
+    }
+    .header__nav.menu--open {
+      display: flex;
+    }
+    .header__secondary-nav.menu--open {
+      display: flex;
+      width: 70dvw;
+      justify-content: space-between;
+    }
+  }
+  
+  /* ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+     ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+  
+     2. 800px et moins
+  
+     ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+     ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+   */
+  
+  @media (max-width: 800px) {
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+       Styles des items de la liste des équipes
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+    .project__teams-item {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-md);
+    }
+
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+       Styles réactifs du formulaire
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+    .form__image-I, .form__image-C {
+      display: none;
+  }
+  .form__actions {
+      position: relative;
+      bottom: 0;
+  }
+  .form-I, .form-C {
+      grid-column: 1 / span 2;
+  }
+  }
+  
+  /* ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+     ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+     
+     3. 728px et moins
+  
+     ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+     ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░*/
+  
+  @media (max-width: 768px) {
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+       Client de la taxonomie du projet unique
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+    .single-projet__taxonomy-client {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+  
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+       Grille des étudiants d'équipe
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+    .equipe__etudiants {
+      display: grid;
+      margin-left: var(--spacing-sm);
+      margin-right: var(--spacing-sm);
+      margin-bottom: 70px;
+    }
+  
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+       Conteneur de l'équipe - Enfants impairs et pairs
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+    .equipe:nth-child(odd) {
+      grid-column: span 12;
+      margin-top: var(--spacing-md);
+    }
+    .equipe:nth-child(even) {
+      grid-column: span 12;
+      margin-top: var(--spacing-md);
+    }
+  
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+       Premier et dernier enfant de l'équipe
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+    .equipe:first-child {
+      margin-top: 15dvh;
+    }
+    .equipe:nth-last-child(2) {
+      margin-bottom: 0;
+    }
+  
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+       Vignette et titre de l'équipe du projet unique
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+    .single-projet-team__thumbnail {
+      grid-column: 1 / span 11;
+      grid-row: 2 / span 1;
+    }
+    .single-projet-team__title {
+      grid-column: span 11;
+    }
+  
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+       Liste des vœux de l'équipe du projet unique
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+    .single-projet-team__voeux-list {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+       Étudiants de l'équipe du projet unique
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+    .single-projet-team .equipe__etudiants {
+      grid-column: span 11;
+      display: grid;
+      gap: var(--spacing-md);
+    }
+    .single-projet-team .equipe__etudiants .equipe__etudiants-list:last-child {
+      margin-bottom: 12px;
+    }
+  
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+       Titre de la sélection
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+    .select-title {
+      margin-top: 15dvh;
+    }
+  
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+       Instructions
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+    .instructions {
+      grid-column: span 12;
+    }
+  
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+       Bouton du carrousel - Version mobile/tablette
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+    .carousel__button {
+      position: absolute;
+      bottom: 5%;
+      left: 5%;
+      right: 5%;
+      width: 90%;
+      transform: none;
+      border-radius: 8px;
+      padding: var(--spacing-sm) 0;
+      text-align: center;
+    }
+  
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+       Styles réactifs du carrousel
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+    .carousel {
+      padding: 80px 20px;
+      gap: 8px;
+    }
+    .carousel__item {
+      width: 280px;
+      height: 280px;
+    }
+    .carousel__item::after {
+      height: 50%;
+      top: 0;
+      bottom: auto;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    }
+    .carousel__title {
+      top: 8px;
+      bottom: auto;
+      left: 10px;
+      max-width: 95%;
+    }
+    .carousel__nav {
+      padding: 10px 15px;
+    }
+    .carousel__nav--prev {
+      left: 10px;
+      bottom: 10px;
+    }
+    .carousel__item:nth-child(odd) {
+      transform: translateY(0px);
+    }
+    .carousel__item:nth-child(even) {
+      transform: translateY(0px);
+    }
+  
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+       Styles réactifs de la liste de projets - Mobile
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+    .project-list__item,
+    .project-list__item:nth-child(even),
+    .project-list__item:nth-child(odd) {
+      flex-direction: column;
+      margin: 0;
+      margin-bottom: var(--spacing-lg);
+    }
+    .project-list__item:nth-child(odd) .project-list__image img,
+    .project-list__item:nth-child(even) .project-list__image img {
+      border-top-right-radius: 8px;
+      border-top-left-radius: 8px;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+    .project-list {
+      padding: 0 var(--spacing-md);
+    }
+    .project-list__item {
+      gap: 0;
+    }
+    .project-list__content {
+      margin-top: -10px;
+      border-radius: 0;
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+    }
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+       Styles réactifs du formulaire
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+    .registration-form {
+      margin-top: 15dvh;
+  }
+  }
+  
+  /* ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+     ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+  
+     4. 600px et moins
+  
+     ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+     ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░*/
+  
+  @media (max-width: 600px) {
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+       Équipes du projet
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+    .project__teams {
+      position: relative;
+      width: 97%;
+      margin: 0;
+      border-radius: 0;
+      border-bottom-left-radius: var(--spacing-md);
+      border-bottom-right-radius: var(--spacing-md);
+      background-color: var(--color-dark-blue);
+    }
+  
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+       Conteneur d'image du projet
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+    .projet__image-container {
+      height: 40dvh;
+      border-radius: 0;
+      border-top-left-radius: var(--spacing-md);
+      border-top-right-radius: var(--spacing-md);
+    }
+  
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+       Taxonomie de la nature du projet
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+    .projet__taxonomy-nature {
+      bottom: 52%;
+    }
+  
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+       Superposition du titre du projet
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+    .projet__title-overlay {
+      width: 85%;
+    }
+  }
+  
+  /* ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+     ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+  
+     5. 500px et moins
+     
+     ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+     ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░*/
+  
+  /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     Grille des étudiants pour équipe du projet unique - 500px et moins
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+  @media (max-width: 500px) {
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+       Grille des étudiants
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+    .equipe__etudiants {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+       Étudiants de l'équipe du projet unique
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+    .single-projet-team .equipe__etudiants {
+        grid-column: span 11;
+      }
+    }
+    

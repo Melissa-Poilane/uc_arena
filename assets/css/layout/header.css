@@ -1,0 +1,219 @@
+/* ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+   ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+
+   1. Header Principal
+
+   ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+   ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░*/
+
+   .header {
+    background-color: var(--color-dark-blue); /* Couleur de fond */
+    padding: var(--spacing-lg) var(--spacing-xl);
+    border-bottom-right-radius: var(--spacing-xl); /* Coin en bas à droite avec un radius */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 1000;
+    transition: all 0.4s ease-in-out;
+}
+
+/* ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+   ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+
+   2. Conteneur Interne de l'En-Tête
+
+   ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+   ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░*/
+
+.header__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-md);
+    width: 100%;
+}
+
+.header__first {
+    display: flex;
+    align-items: center;
+    z-index: 2000;
+}
+
+.header__logo-image {
+    max-height: 35px;
+}
+
+/* ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+   ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+
+   3. Navigation et Menus
+
+   ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+   ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░*/
+
+.header__nav {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    transition: transform 0.3s ease;
+}
+
+.header__menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: var(--spacing-md);
+}
+
+.header__secondary-nav {
+    margin-left: var(--spacing-md);
+    display: flex;
+    gap: var(--spacing-md);
+    align-items: center;
+}
+
+.menu-item a,
+.header__secondary-nav a {
+    color: var(--color-white);
+    text-decoration: none;
+    font-weight: var(--font-weight-bold);
+    transition: color 0.3s ease;
+}
+
+.menu-item a:hover,
+.header__secondary-nav a:hover {
+    color: var(--color-light-blue);
+}
+
+.current-menu-item > a {
+    color: var(--color-light-blue); /* Couleur d'accentuation bleue claire pour la page active */
+}
+
+/* ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+   ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+
+   4. Menu Hamburger (Tablette et Mobile)
+
+   ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+   ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░*/
+
+.header__menu-toggle {
+    position: relative;
+    width: 40px; /* Largeur du hamburger */
+    height: 40px; /* Hauteur totale du bouton */
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 2000; /* Plus grand que le menu pour assurer la visibilité */
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+    display: none; /* Masqué par défaut */
+}
+
+.menu-btn__hamburger {
+    position: relative;
+    width: 100%;
+    height: 2.5px; /* Réduire l'épaisseur des lignes */
+    background-color: var(--color-white);
+    border-radius: 4px; /* Coins arrondis des lignes */
+    transition: background-color 0.3s ease-in-out;
+}
+
+.menu-btn__hamburger::before,
+.menu-btn__hamburger::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 36px;
+    height: 2.5px; /* Réduire l'épaisseur des lignes */
+    background-color: var(--color-white);
+    border-radius: 4px; /* Coins arrondis des lignes */
+    transition: transform 0.3s ease, top 0.3s ease, bottom 0.3s ease;
+}
+
+.menu-btn__hamburger::before {
+    top: -12px; /* Distance de la ligne supérieure par rapport à la ligne centrale */
+    right: -5px;
+}
+
+.menu-btn__hamburger::after {
+    bottom: -12px; /* Distance de la ligne inférieure par rapport à la ligne centrale */
+}
+
+/* ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+   ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+
+   5. Activation du Menu Hamburger (Croix)
+
+   ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+   ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░*/
+
+.header__menu-toggle.active .menu-btn__hamburger {
+    background-color: transparent; /* Ligne du milieu devient invisible */
+}
+
+.header__menu-toggle.active .menu-btn__hamburger::before {
+    transform: rotate(45deg); /* Ligne supérieure en diagonale */
+    top: 2px; /* Placer au centre */
+}
+
+.header__menu-toggle.active .menu-btn__hamburger::after {
+    transform: rotate(-45deg); /* Ligne inférieure en diagonale */
+    bottom: 2px; /* Placer au centre */
+}
+
+.header__secondary-nav a {
+    transition: 0.3s ease;
+    padding: 14px var(--spacing-md);
+    background-color: var(--color-light-blue);
+    border-radius: var(--spacing-sm);
+    border: 1px solid var(--color-light-blue);
+}
+
+.header__secondary-nav a:nth-child(1) {
+    color: var(--color-white);
+}
+
+.header__secondary-nav a:nth-child(2) {
+    color: var(--color-dark-blue);
+    background-color: var(--color-white);
+    border: 1px solid var(--color-white);
+}
+
+.header__secondary-nav a:nth-child(1):hover {
+    background-color: var(--color-dark-blue);
+    color: var(--color-light-blue);
+}
+
+.header__secondary-nav a:nth-child(2):hover {
+    background-color: var(--color-dark-blue);
+    color: var(--color-white);
+}
+
+.header__menu-toggle.menu-btn--open .menu-btn__hamburger {
+    background-color: transparent; /* Ligne du milieu devient invisible */
+}
+
+.header__menu-toggle.menu-btn--open .menu-btn__hamburger::before {
+    transform: rotate(45deg); /* Ligne supérieure en diagonale */
+    top: 0; /* Placer au centre */
+}
+
+.header__menu-toggle.menu-btn--open .menu-btn__hamburger::after {
+    transform: rotate(-45deg); /* Ligne inférieure en diagonale */
+    bottom: 0; /* Placer au centre */
+}
+
+/* ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+   ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+
+   6. Scroll - Désactiver lors de l'Ouverture du Menu
+
+   ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+   ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░*/
+
+.no-scroll {
+    overflow: hidden;
+}

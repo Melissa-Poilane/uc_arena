@@ -1,0 +1,17 @@
+:root {
+    /* Couleurs */
+    --color-dark-blue: #013C5C;  /* Bleu foncé */
+    --color-light-blue: #42C7E6; /* Bleu clair */
+    --color-white: #FFFFFF;      /* Blanc */
+
+    /* Espacement courant sur le web */
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+    --spacing-xxl: 48px;
+
+    /* Typographie */
+    --font-weight-bold: 700;
+}

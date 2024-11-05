@@ -1,0 +1,98 @@
+ /* ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+    ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+  
+     1. Bouton du carrousel de la page Projets
+
+    ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+    ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░*/
+
+     .carousel__button {
+        position: absolute;
+        bottom: 24px;
+        right: -24px;
+        transform: translateX(-50%);
+        z-index: 2;
+        padding: var(--spacing-sm) var(--spacing-md);
+        background-color: var(--color-light-blue);
+        color: var(--color-white);
+        text-decoration: none;
+        transition: 0.4s ease;
+        border-radius: 4px;
+        border: 1px solid var(--color-light-blue);
+      }
+      
+    .carousel__button:hover {
+        background-color: var(--color-white);
+        color: var(--color-light-blue);
+        border: 1px solid var(--color-light-blue);
+    }
+    
+     /* ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+        ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+      
+         2. Bouton Voir Plus
+
+        ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+        ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░*/
+    
+    .project-list__button {
+        display: inline-block;
+        padding: var(--spacing-sm) var(--spacing-md);
+        background-color: var(--color-light-blue);
+        color: var(--color-white);
+        text-decoration: none;
+        transition: 0.4s ease;
+        border-radius: 4px;
+        border: 1px solid var(--color-light-blue);
+        position: absolute;
+        bottom: 12px;
+        right: 12px;
+        text-align: center;
+    }
+    
+    .project-list__button:hover {
+        background-color: var(--color-white);
+        color: var(--color-light-blue);
+        border: 1px solid var(--color-light-blue);
+    }
+    
+     /* ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+        ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+      
+         3. Bouton projet suivant et précedent
+
+        ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+        ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░*/
+    
+    .single-projet__navigation {
+       display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-md);
+        max-width: 1200px; /* Définir une largeur maximale pour le contenu centré */
+        margin: 0 auto; /* Centrer la grille horizontalement */
+        margin-top: 32px;
+        padding: 0 var(--spacing-md);
+    }
+    
+    .single-projet__navigation-item {
+        flex: 1;
+    }
+    
+    .single-projet__navigation-link {
+        display: inline-block;
+        padding: 12px 16px;
+        background-color: var(--color-light-blue);
+        color: var(--color-white);
+        text-decoration: none;
+        border-radius: 4px;
+        transition: background-color 0.3s ease;
+    }
+    
+    .single-projet__navigation-link:hover {
+        background-color: var(--color-dark-blue);
+    }
+    
+    .single-projet__navigation .next {
+        float: right;
+    }
+    

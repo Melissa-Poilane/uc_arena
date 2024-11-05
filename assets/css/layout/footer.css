@@ -1,0 +1,22 @@
+.footer {
+    background-color: var(--color-dark-blue); /* Fond bleu foncé */
+    padding: var(--spacing-lg);
+    text-align: center;
+    color: var(--color-white); /* Couleur du texte en blanc */
+    border-top-left-radius: var(--spacing-xl); /* Radius en haut à gauche */
+    border-top-right-radius: var(--spacing-xl); /* Radius en haut à droite */
+    margin-top: var(--spacing-md);
+}
+
+.footer__logo {
+    margin-bottom: var(--spacing-md);
+}
+
+.footer__logo-image {
+    max-height: 40px; /* Taille maximale de l'image */
+}
+
+.footer__text {
+    font-size: 1rem;
+    font-weight: var(--font-weight-bold);
+}

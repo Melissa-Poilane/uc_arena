@@ -1,0 +1,25 @@
+/*
+Theme Name: Les Projets Collectifs
+Author: Mélissa Poilâne
+Author URI: https://melissapoilane.fr/
+Description: Le thème du site des projets collectifs de MMI
+Version: 0.1
+Tags: simple, facile, sans danger, super cool
+*/
+
+/* Imports existants */
+@import "assets/css/base/main.css";
+@import "assets/css/utils/variables.css";
+@import "assets/css/utils/mixins.css";
+@import "assets/css/base/typography.css";
+@import "assets/css/layout/header.css";
+@import "assets/css/layout/footer.css";
+@import "assets/css/layout/hero.css";
+@import "assets/css/layout/navigation.css";
+@import "assets/css/layout/carousel.css";
+@import "assets/css/layout/projects-list.css";
+
+/* Autres imports existants */
+@import "assets/css/components/buttons.css";
+@import "assets/css/components/forms.css";
+@import "assets/css/base/responsive.css";
