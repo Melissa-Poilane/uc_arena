@@ -23,7 +23,7 @@
       left: 0;
       width: 100vw;
       height: 100vh;
-      background-color: var(--color-dark-blue);
+      background-color: var(--Crimson-Shadow);
       z-index: 700;
     }
     .header__nav {
@@ -51,7 +51,7 @@
     }
     .header__secondary-nav {
       display: none;
-      background-color: var(--color-dark-blue);
+      background-color: var(--Crimson-Shadow);
       z-index: 1000;
       position: fixed;
       bottom: 5dvh;
@@ -314,7 +314,7 @@
       border-radius: 0;
       border-bottom-left-radius: var(--spacing-md);
       border-bottom-right-radius: var(--spacing-md);
-      background-color: var(--color-dark-blue);
+      background-color: var(--Crimson-Shadow);
     }
   
     /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

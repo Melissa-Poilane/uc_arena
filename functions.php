@@ -136,13 +136,6 @@ function projet_mmi_customizer_register($wp_customize) {
 }
 add_action('customize_register', 'projet_mmi_customizer_register');
 
-function projet_mmi_enqueue_archive_assets() {
-    if (is_post_type_archive('projet')) {
-        wp_enqueue_script('projet-carousel', get_template_directory_uri() . '/assets/js/carousel.js', array(), '1.0', true);
-    }
-}
-add_action('wp_enqueue_scripts', 'projet_mmi_enqueue_archive_assets');
-
 function enqueue_alpine_script() {
     wp_enqueue_script('alpinejs', 'https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js', array(), '3.x.x', true);
 }

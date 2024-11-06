@@ -1,17 +1,37 @@
 :root {
-    /* Couleurs */
-    --color-dark-blue: #013C5C;  /* Bleu foncé */
-    --color-light-blue: #42C7E6; /* Bleu clair */
-    --color-white: #FFFFFF;      /* Blanc */
+    /* Couleurs principales */
+    --The-Wild-Apothecary :#FD4556; /* Rouge Clair */
+    --Aqua-Mirage: #42FED0; /* Vert Clair */
+    --Radiant-Orchid: #1E1E1E; /* Noir */
+    --Crimson-Shadow:#53212B; /* Rouge Foncé */
+    --Cupids-eye: #FFFBF5; /* Blanc */
 
     /* Espacement courant sur le web */
     --spacing-xs: 4px;
     --spacing-sm: 8px;
-    --spacing-md: 16px;
+    --spacing-md: 14px;
     --spacing-lg: 24px;
-    --spacing-xl: 32px;
-    --spacing-xxl: 48px;
+    --spacing-xl: 30px;
+    --spacing-xxl: 50px;
+    --spacing-xxxl: 80px;
+    --spacing-xxxxl: 100px;
 
     /* Typographie */
     --font-weight-bold: 700;
+
+    /* Text-size styles */
+/* base size: b2--m (16px) */
+--h1--d: 3.75rem;
+--h2--d: 1.88rem;
+--h3--d: 2.25rem;
+--b1--d: 1.5rem;
+--b2--d: 1.12rem;
+--h1--m: 2.25rem;
+--h2--m: 1.5rem;
+--h3--m: 1.88rem;
+--b1--m: 1.12rem;
+--b2--m: 1rem;
+--button: 0.75rem;
+--small: 0.88rem;
+
 }

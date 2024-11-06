@@ -7,7 +7,7 @@
    ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░*/
 
    .header {
-    background-color: var(--color-dark-blue); /* Couleur de fond */
+    background-color: var(--Crimson-Shadow); /* Couleur de fond */
     padding: var(--spacing-lg) var(--spacing-xl);
     border-bottom-right-radius: var(--spacing-xl); /* Coin en bas à droite avec un radius */
     display: flex;
@@ -75,7 +75,7 @@
 
 .menu-item a,
 .header__secondary-nav a {
-    color: var(--color-white);
+    color: var(--Cupids-eye);
     text-decoration: none;
     font-weight: var(--font-weight-bold);
     transition: color 0.3s ease;
@@ -83,11 +83,11 @@
 
 .menu-item a:hover,
 .header__secondary-nav a:hover {
-    color: var(--color-light-blue);
+    color: var(--The-Wild-Apothecary);
 }
 
 .current-menu-item > a {
-    color: var(--color-light-blue); /* Couleur d'accentuation bleue claire pour la page active */
+    color: var(--The-Wild-Apothecary); /* Couleur d'accentuation bleue claire pour la page active */
 }
 
 /* ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
@@ -116,7 +116,7 @@
     position: relative;
     width: 100%;
     height: 2.5px; /* Réduire l'épaisseur des lignes */
-    background-color: var(--color-white);
+    background-color: var(--Cupids-eye);
     border-radius: 4px; /* Coins arrondis des lignes */
     transition: background-color 0.3s ease-in-out;
 }
@@ -128,7 +128,7 @@
     left: 0;
     width: 36px;
     height: 2.5px; /* Réduire l'épaisseur des lignes */
-    background-color: var(--color-white);
+    background-color: var(--Cupids-eye);
     border-radius: 4px; /* Coins arrondis des lignes */
     transition: transform 0.3s ease, top 0.3s ease, bottom 0.3s ease;
 }
@@ -167,29 +167,29 @@
 .header__secondary-nav a {
     transition: 0.3s ease;
     padding: 14px var(--spacing-md);
-    background-color: var(--color-light-blue);
+    background-color: var(--The-Wild-Apothecary);
     border-radius: var(--spacing-sm);
-    border: 1px solid var(--color-light-blue);
+    border: 1px solid var(--The-Wild-Apothecary);
 }
 
 .header__secondary-nav a:nth-child(1) {
-    color: var(--color-white);
+    color: var(--Cupids-eye);
 }
 
 .header__secondary-nav a:nth-child(2) {
-    color: var(--color-dark-blue);
-    background-color: var(--color-white);
-    border: 1px solid var(--color-white);
+    color: var(--Crimson-Shadow);
+    background-color: var(--Cupids-eye);
+    border: 1px solid var(--Cupids-eye);
 }
 
 .header__secondary-nav a:nth-child(1):hover {
-    background-color: var(--color-dark-blue);
-    color: var(--color-light-blue);
+    background-color: var(--Crimson-Shadow);
+    color: var(--The-Wild-Apothecary);
 }
 
 .header__secondary-nav a:nth-child(2):hover {
-    background-color: var(--color-dark-blue);
-    color: var(--color-white);
+    background-color: var(--Crimson-Shadow);
+    color: var(--Cupids-eye);
 }
 
 .header__menu-toggle.menu-btn--open .menu-btn__hamburger {

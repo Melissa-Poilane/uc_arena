@@ -15,12 +15,12 @@ body {
 }
 
 a {
-  color: var(--color-dark-blue);
+  color: var(--Crimson-Shadow);
   transition: color 0.5s ease;
 }
 
 a:hover {
-  color: var(--color-light-blue);
+  color: var(--The-Wild-Apothecary);
 }
 
 /* 
@@ -43,12 +43,12 @@ a:hover {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--color-light-blue);
+  background: var(--The-Wild-Apothecary);
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-white);
+  background: var(--Cupids-eye);
 }
 
 /* 
@@ -201,7 +201,7 @@ a:hover {
   position: absolute;
   top: var(--spacing-md);
   left: var(--spacing-xl);
-  color: var(--color-white);
+  color: var(--Cupids-eye);
   font-size: 2rem;
   z-index: 2;
 }
@@ -226,11 +226,11 @@ a:hover {
   transform: translateX(-50%);
   padding: var(--spacing-md);
   background-color: rgba(1, 60, 92, 0.6);
-  border: 1px solid var(--color-light-blue);
+  border: 1px solid var(--The-Wild-Apothecary);
   border-radius: var(--spacing-md);
   z-index: 3;
   bottom: 20dvh;
-  color: var(--color-white);
+  color: var(--Cupids-eye);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
 }
@@ -248,19 +248,19 @@ a:hover {
 .single-projet__taxonomy-item {
   margin-top: var(--spacing-md);
   display: inline-block;
-  background-color: var(--color-light-blue);
+  background-color: var(--The-Wild-Apothecary);
   padding: var(--spacing-sm) var(--spacing-md);
   border-radius: var(--spacing-xs);
-  color: var(--color-white);
+  color: var(--Cupids-eye);
   text-decoration: none;
   transition: background-color 0.3s ease;
-  border: 1px solid var(--color-white);
+  border: 1px solid var(--Cupids-eye);
 }
 
 .single-projet__taxonomy-item:hover {
-  background-color: var(--color-dark-blue);
-  border: 1px solid var(--color-light-blue);
-  color: var(--color-light-blue);
+  background-color: var(--Crimson-Shadow);
+  border: 1px solid var(--The-Wild-Apothecary);
+  color: var(--The-Wild-Apothecary);
 }
 
 .single-projet__taxonomy-client {
@@ -320,7 +320,7 @@ a:hover {
   position: absolute;
   bottom: 7%;
   left: var(--spacing-xl);
-  color: var(--color-white);
+  color: var(--Cupids-eye);
   font-size: 1.2rem;
   z-index: 2;
   width: 50%;
@@ -331,10 +331,10 @@ a:hover {
   top: 0;
   right: 0;
   background-color: rgba(1, 60, 92, 0.6);
-  border: 1px solid var(--color-light-blue);
+  border: 1px solid var(--The-Wild-Apothecary);
   border-radius: var(--spacing-md);
   z-index: 3;
-  color: var(--color-white);
+  color: var(--Cupids-eye);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   width: 40%;
@@ -363,7 +363,7 @@ a:hover {
   display: flex;
   gap: var(--spacing-md);
   align-items: center;
-  background-color: var(--color-white);
+  background-color: var(--Cupids-eye);
   padding: var(--spacing-sm) var(--spacing-md);
   border-radius: var(--spacing-sm);
   justify-content: space-between;
@@ -372,7 +372,7 @@ a:hover {
 
 .project__teams-item:hover {
   background-color: #1e1e1e;
-  color: var(--color-white);
+  color: var(--Cupids-eye);
   font-weight: var(--font-weight-bold);
 }
 
@@ -410,7 +410,7 @@ a:hover {
 .equipe:nth-child(odd) {
   grid-column: span 5;
   margin-top: var(--spacing-xxl);
-  background-color: var(--color-white);
+  background-color: var(--Cupids-eye);
   position: relative;
   border-radius: var(--spacing-md);
   width: 100%;
@@ -419,7 +419,7 @@ a:hover {
 .equipe:nth-child(even) {
   grid-column: 7 / span 5;
   margin-top: var(--spacing-xxl);
-  background-color: var(--color-white);
+  background-color: var(--Cupids-eye);
   position: relative;
   border-radius: var(--spacing-md);
   width: 100%;
@@ -465,10 +465,10 @@ a:hover {
   margin-left: var(--spacing-xs);
   margin-right: var(--spacing-xs);
   list-style: none;
-  background-color: var(--color-dark-blue);
+  background-color: var(--Crimson-Shadow);
   padding: 12px;
   border-radius: var(--spacing-sm);
-  color: var(--color-white);
+  color: var(--Cupids-eye);
   margin-bottom: 0;
 }
 
@@ -575,7 +575,7 @@ a:hover {
   position: absolute;
   width: 20px;
   height: 20px;
-  border: 2px solid var(--color-dark-blue);
+  border: 2px solid var(--Crimson-Shadow);
   background-color: transparent;
 }
 
@@ -619,7 +619,7 @@ a:hover {
 
 .single-projet-team__voeux-item {
   width: 100%;
-  background-color: var(--color-white);
+  background-color: var(--Cupids-eye);
   border-radius: var(--spacing-md);
   overflow: hidden;
   display: flex;
@@ -628,7 +628,7 @@ a:hover {
 }
 
 .single-projet-team__voeux-item:hover {
-  background-color: var(--color-light-blue);
+  background-color: var(--The-Wild-Apothecary);
 }
 
 .single-projet-team__voeux-image {
@@ -656,8 +656,8 @@ a:hover {
   display: flex;
   align-items: center;
   padding: 8px;
-  background-color: var(--color-dark-blue); /* Fond sombre */
-  color: var(--color-white);
+  background-color: var(--Crimson-Shadow); /* Fond sombre */
+  color: var(--Cupids-eye);
   border-bottom-left-radius: var(--spacing-md);
   border-bottom-right-radius: var(--spacing-md);
   margin-top: 0; /* Enlever l'espace entre l'image et la section de texte */
@@ -665,13 +665,13 @@ a:hover {
 }
 
 .single-projet-team__voeux-item:hover .single-projet-team__voeux-text {
-  background-color: var(--color-light-blue); /* Changer le fond au survol */
+  background-color: var(--The-Wild-Apothecary); /* Changer le fond au survol */
 }
 
 .single-projet-team__voeux-order {
   padding: var(--spacing-xs);
-  background-color: var(--color-white); /* Couleur de fond par défaut */
-  color: var(--color-dark-blue);
+  background-color: var(--Cupids-eye); /* Couleur de fond par défaut */
+  color: var(--Crimson-Shadow);
   font-weight: var(--font-weight-bold);
   border-radius: 50%;
   width: 30px;
@@ -688,7 +688,7 @@ a:hover {
 
 .single-projet-team__voeux-item:hover .single-projet-team__voeux-order {
   background-color: #1e1e1e; /* Couleur de fond au survol */
-  color: var(--color-white);
+  color: var(--Cupids-eye);
 }
 
 .single-projet-team__voeux-name {

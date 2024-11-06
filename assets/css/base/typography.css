@@ -1,40 +1,86 @@
-body {
-    font-family: Arial, sans-serif;
-    color: var(--color-dark-blue); /* Couleur par défaut du texte */
-}
+/* UC Arena 2024 Typography Styles */
 
-/* Styles pour les titres de la description du site */
-.site-title-description h1 {
-    margin: 0;
-    color: var(--color-dark-blue); /* Utilisation de la couleur bleu foncé définie */
-    font-weight: var(--font-weight-bold); /* Utilisation du poids défini */
-}
+/* Responsive Typography Styles */
 
-.site-title-description h2 {
-    margin: var(--spacing-xs) 0 0; /* Espacement supérieur */
-   color: var(--color-light-blue); /* Utilisation de la couleur bleu clair définie */
-    font-weight: normal;
-}
-
-.single-projet__commanditaire strong,
-.single-projet__tuteur strong,
-.single-projet__deadline strong,
-.single-projet__taxonomy-title {
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin-bottom: 4px;
-}
-
-.single-projet__info-container p {
-    padding: 0;
-     margin: 0;
- }
-
- .project__teams-title {
-    padding-top: var(--spacing-md);
-    padding-left: var(--spacing-md);
-    font-size: 1.3rem;
-    text-align: center;
-    display: flex;
+h1 {
+    font-family: "Anton SC", sans-serif;
+    font-size: 60px;
+    line-height: 110%;
+    letter-spacing: -0.05em;
   }
-
+  
+  h2 {
+    font-family: "Anton SC", sans-serif;
+    font-size: 30px;
+    line-height: 110%;
+    letter-spacing: -0.05em;
+  }
+  
+  h3 {
+    font-family: "Anton SC", sans-serif;
+    font-size: 36px;
+    line-height: 110%;
+    letter-spacing: -0.05em;
+  }
+  
+  body {
+    font-family: "Public Sans", sans-serif;
+    font-size: 24px;
+    line-height: 150%;
+  }
+  
+  .body2 {
+    font-family: "Public Sans", sans-serif;
+    font-size: 18px;
+    line-height: 110%;
+  }
+  
+  .button {
+    font-family: "Anton SC", sans-serif;
+    font-size: 12px;
+    line-height: 160%;
+    letter-spacing: 0.1em;
+  }
+  
+  .small {
+    font-family: "Public Sans", sans-serif;
+    font-size: 14px;
+    line-height: 160%;
+  }
+  
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 36px;
+    }
+    h2 {
+      font-size: 24px;
+    }
+    h3 {
+      font-size: 30px;
+    }
+    body {
+      font-size: 18px;
+    }
+    .body2 {
+      font-size: 16px;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    h1 {
+      font-size: 60px;
+    }
+    h2 {
+      font-size: 30px;
+    }
+    h3 {
+      font-size: 36px;
+    }
+    body {
+      font-size: 24px;
+    }
+    .body2 {
+      font-size: 18px;
+    }
+  }
+  

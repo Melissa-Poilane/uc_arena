@@ -2,7 +2,7 @@
    .registration-form {
     margin-top: 18dvh;
     grid-column: span 12;
-    background-color: var(--color-white);
+    background-color: var(--Cupids-eye);
     padding: var(--spacing-lg);
     border-radius: 12px;
     display: grid;
@@ -54,7 +54,7 @@
 
 .form__input {
     padding: var(--spacing-sm);
-    border: 1px solid var(--color-dark-blue);
+    border: 1px solid var(--Crimson-Shadow);
     border-radius: 8px;
 }
 
@@ -71,7 +71,7 @@
     height: 35px;
     padding: var(--spacing-sm);
     border-radius: var(--spacing-sm);
-    background-color: var(--color-dark-blue);
+    background-color: var(--Crimson-Shadow);
 }
 .form__image-I {
     width: 100%;
@@ -111,8 +111,8 @@
 .form__submit {
     padding: 12px;
     border-radius: var(--spacing-xl);
-    background-color: var(--color-dark-blue);
-    color: var(--color-white);
+    background-color: var(--Crimson-Shadow);
+    color: var(--Cupids-eye);
     font-weight: var(--font-weight-bold);
     text-transform: uppercase;
     width: 90%;

@@ -1,8 +1,8 @@
 .footer {
-    background-color: var(--color-dark-blue); /* Fond bleu foncé */
+    background-color: var(--Crimson-Shadow); /* Fond bleu foncé */
     padding: var(--spacing-lg);
     text-align: center;
-    color: var(--color-white); /* Couleur du texte en blanc */
+    color: var(--Cupids-eye); /* Couleur du texte en blanc */
     border-top-left-radius: var(--spacing-xl); /* Radius en haut à gauche */
     border-top-right-radius: var(--spacing-xl); /* Radius en haut à droite */
     margin-top: var(--spacing-md);
