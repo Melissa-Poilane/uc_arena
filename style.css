@@ -1,10 +1,10 @@
 /*
-Theme Name: Les Projets Collectifs
+Theme Name: UC Arena 2024 | SAE 301
 Author: Mélissa Poilâne
 Author URI: https://melissapoilane.fr/
-Description: Le thème du site des projets collectifs de MMI
+Description: Le thème du site du tournois Valorant UC Arena 2024
 Version: 0.1
-Tags: simple, facile, sans danger, super cool
+Tags: simple, facile, sans danger, super cool, E-sport, Valorant, UC Arena, 2024s
 */
 
 /* Imports existants */
@@ -23,3 +23,5 @@ Tags: simple, facile, sans danger, super cool
 @import "assets/css/components/buttons.css";
 @import "assets/css/components/forms.css";
 @import "assets/css/base/responsive.css";
+@import "assets/css/layout/match.css";
+@import "assets/css/layout/equipe.css";

@@ -1,0 +1,111 @@
+.all-matches {
+ margin-left: var(--spacing-lg);
+    margin-right: var(--spacing-lg);
+}
+.all-matches__matches-item {
+  display: flex;
+  margin: 0;
+  border-bottom: 1px solid #e5e5e5;
+  background-color: var(--Radiant-Orchid);
+  flex-direction: column;
+  position: relative;
+  padding: 0;
+  max-width: 50%;
+}
+@media(max-width: 768px) {
+  .all-matches__matches-item {
+    max-width: 100%;
+  }
+}
+.all-matches__phase h3 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0px;
+    margin-top: var(--spacing-xl);
+    margin-bottom: var(--spacing-lg);
+}
+.all-matches__phase {
+    display: flex;
+    gap: 40px;
+    align-items: baseline;
+}
+.team {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    background-color: var(--Radiant-Orchid);
+    color: var(--Cupids-eye);
+    margin-left: 8px;
+}
+.team--a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 8px;
+    height: 50%;
+    background-color: var(--The-Wild-Apothecary);
+}
+.team a {
+    color: var(--Cupids-eye);
+    text-decoration: none;
+    max-width: 100%;
+}
+.team a:hover {
+    color: var(--Aqua-Mirage);
+}
+ul {
+    margin: 0;
+    padding: 0;
+}
+.all-matches__title {
+    margin: 0;
+    padding-top: 18dvh;
+    padding-bottom: var(--spacing-md);
+}
+
+.team--a {
+    border-bottom: 1px solid var(--The-Wild-Apothecary);
+}
+
+.team h3 {
+    max-width: 45%;
+}
+.all-matches__score h3:first-child {
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    color: var(--The-Wild-Apothecary);
+}
+
+.all-matches__score h3:last-child {
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+    color: var(--Cupids-eye);
+}
+
+.single-match__title {
+    margin: 0;
+    position: absolute;
+    top:35vh;
+    padding-bottom: var(--spacing-md);
+    grid-column: span 11;
+    color: var(--Cupids-eye);
+    z-index: 2;
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+}
+.single-match__details {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin: 0;
+    padding: 0;
+    grid-column: span 11;
+}
+.single-match__date, .single-match__map{
+    margin: 0;
+}

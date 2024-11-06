@@ -7,7 +7,7 @@
         </a>
     </div>
     <div class="footer__text">
-        2024 : <?php echo esc_html(get_bloginfo('name')); ?>.
+     <?php echo esc_html(get_bloginfo('name')); ?> | SAE 301 | <a href="<?php echo esc_url(home_url('/infos-legales')); ?>" class="footer__link">Infos légales</a>
     </div>
 </footer>
 <?php wp_footer(); ?>

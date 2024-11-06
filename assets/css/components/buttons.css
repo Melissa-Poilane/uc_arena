@@ -55,6 +55,22 @@
         color: var(--The-Wild-Apothecary);
         border: 1px solid var(--The-Wild-Apothecary);
     }
+
+    .intro_btn {
+        display: inline-block;
+        padding: 0 var(--spacing-xxxxl);
+        background-color: var(--The-Wild-Apothecary);
+        color: var(--Cupids-eye);
+        text-decoration: none;
+        transition: 0.4s ease;
+        border-radius: var(--spacing-xxl);
+        border: 1px solid var(--The-Wild-Apothecary);
+        text-align: center;
+    }
+
+    .intro_btn h3 {
+        margin: var(--spacing-md);
+    }
     
      /* ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
         ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░

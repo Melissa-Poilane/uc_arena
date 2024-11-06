@@ -8,7 +8,7 @@
 
    .header {
     background-color: var(--Crimson-Shadow); /* Couleur de fond */
-    padding: var(--spacing-lg) var(--spacing-xl);
+    padding: 14px var(--spacing-xl);
     border-bottom-right-radius: var(--spacing-xl); /* Coin en bas à droite avec un radius */
     display: flex;
     align-items: center;
@@ -30,7 +30,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: var(--spacing-md);
+    gap: var(--spacing-xl);
     width: 100%;
 }
 
@@ -41,7 +41,7 @@
 }
 
 .header__logo-image {
-    max-height: 35px;
+    max-height: 52px;
 }
 
 /* ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
@@ -62,8 +62,32 @@
 .header__menu {
     display: flex;
     align-items: center;
+    gap: 65px;
     list-style: none;
-    gap: var(--spacing-md);
+    margin-left: var(--spacing-lg);
+}
+
+.header__menu li {
+    position: relative;
+}
+
+.header__menu li a {
+    text-decoration: none; /* Supprime la décoration de texte par défaut */
+}
+
+.header__menu li.current-item a {
+    color: var(--The-Wild-Apothecary); /* Couleur rouge pour l'élément avec la classe current-item */
+}
+
+.header__menu li a::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -30px; /* Ajustez cette valeur selon vos besoins */
+    width: 10px; /* Taille du carré */
+    height: 10px; /* Taille du carré */
+    background-color: currentColor; /* Utilise la couleur de l'élément a */
+    transform: rotate(45deg) translateY(-50%);
 }
 
 .header__secondary-nav {
@@ -77,13 +101,12 @@
 .header__secondary-nav a {
     color: var(--Cupids-eye);
     text-decoration: none;
-    font-weight: var(--font-weight-bold);
     transition: color 0.3s ease;
 }
 
 .menu-item a:hover,
 .header__secondary-nav a:hover {
-    color: var(--The-Wild-Apothecary);
+    color: var(--Aqua-Mirage);
 }
 
 .current-menu-item > a {
@@ -166,7 +189,7 @@
 
 .header__secondary-nav a {
     transition: 0.3s ease;
-    padding: 14px var(--spacing-md);
+    padding: 12px var(--spacing-lg);
     background-color: var(--The-Wild-Apothecary);
     border-radius: var(--spacing-sm);
     border: 1px solid var(--The-Wild-Apothecary);

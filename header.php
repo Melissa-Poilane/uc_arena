@@ -34,18 +34,18 @@
 
         <!-- Menu principal -->
         <nav class="header__nav" id="mainNav" :class="{ 'menu--open': menuIsOpen }">
-            <?php
+           <h2> <?php
             wp_nav_menu(array(
                 'theme_location' => 'header-menu',
                 'container' => false,
                 'menu_class' => 'header__menu'
             ));
-            ?>
+            ?></h2>
         </nav>
 
         <!-- Menu secondaire : Connexion/Déconnexion -->
         <nav class="header__secondary-nav" id="mainNav" :class="{ 'menu--open': menuIsOpen }">
-            <?php display_login_logout_link(); ?>
+        <h2> <?php display_login_logout_link(); ?></h2>
         </nav>
     </div>
 </header>

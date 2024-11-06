@@ -7,7 +7,9 @@
    ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
    ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
  */
-
+html{
+  scroll-behavior: smooth;
+}
 body {
   margin: 0;
   padding: 0;
@@ -17,6 +19,7 @@ body {
 a {
   color: var(--Crimson-Shadow);
   transition: color 0.5s ease;
+  text-decoration: none;
 }
 
 a:hover {
@@ -90,9 +93,39 @@ a:hover {
  */
 
 .site-title {
-  grid-column: span 12;
   text-align: center;
-  padding: var(--spacing-lg) 0;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--Cupids-eye);
+  z-index: 2;
+}
+
+.intro_btn {
+  position: absolute;
+  bottom: 27%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  padding: 0;
+  z-index: 2;
+  width: 200px;
+}
+
+.intro_btn:hover {
+  background-color: var(--Aqua-Mirage);
+  color: var(--Radiant-Orchid);
+  border: 1px solid var(--Aqua-Mirage);
+}
+
+@media screen and (max-width: 1024px) {
+  .site-title {
+    top: 50%;
+  }
+
+  .intro_btn {
+    bottom: 50px;
+  }
 }
 
 /* 
@@ -105,600 +138,81 @@ a:hover {
    ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
  */
 
-.select-title {
+.description {
   grid-column: span 12;
-  margin-top: 18dvh;
+  margin: var(--spacing-xl) var(--spacing-lg);
 }
-
-.description,
-.single-projet__details {
-  grid-column: span 12;
+@media screen and (min-width: 1024px) {
+  .description {
+    margin: 0;
+    margin-top: var(--spacing-xxxxl);
+  }
 }
 
 .instructions {
   grid-column: span 8;
 }
 
-.footer-message {
-  grid-column: span 12;
-  font-weight: var(--font-weight-bold);
-}
-
-/* 
-   ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-   ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-
-     6. Conteneurs d'Image (Image Containers)
-     
-   ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-   ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
- */
-
-.single-projet__image-container,
-.projet__image-container {
+.instructions h2 {
   position: relative;
+  font-family: "Anton SC", sans-serif;
+  font-size: 36px;
+  line-height: 110%;
+  letter-spacing: -0.05em;
+  display: inline-block;
+}
+
+.instructions h2::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
   width: 100%;
-  height: 60dvh;
-  margin: 0 auto;
-  overflow: hidden;
-  border-radius: var(--spacing-md);
+  height: 20px;
+  background-color: var(--The-Wild-Apothecary);
+  z-index: -1;
 }
 
-.single-projet__image-container {
-  margin-top: 17dvh;
+.instruction-img {
+  grid-column: span 4;
+  margin-top: var(--spacing-lg);
 }
-
-.single-projet__image-container img,
-.projet__image-container img {
+.instruction-img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: bottom;
+  object-position: center;
+}
+.instruction__section {
+  margin-top: var(--spacing-lg);
 }
 
-/* 
-   ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-   ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-
-     7. Overlays d'Image (Image Overlays)
-     
-   ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-   ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
- */
-
-.single-projet__image-overlay,
-.projet__image-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-}
-
-.single-projet__image-overlay {
-  width: 60%;
-  height: 100%;
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.8), transparent);
-}
-
-.projet__image-overlay {
-  width: 100%;
-  height: 50%;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), transparent);
-}
-
-/* 
-   ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-   ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-
-     8. Overlays de Titre (Title Overlays)
-     
-   ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-   ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
- */
-
-.single-projet__title-overlay,
-.projet__title-overlay {
-  position: absolute;
-  top: var(--spacing-md);
-  left: var(--spacing-xl);
-  color: var(--Cupids-eye);
-  font-size: 2rem;
-  z-index: 2;
-}
-
-.projet__title-overlay {
-  width: 50%;
-}
-
-/* 
-   ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-   ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-
-     9. Informations sur le Projet (Project Information)
-     
-   ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-   ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
- */
-
-.single-projet__info {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  padding: var(--spacing-md);
-  background-color: rgba(1, 60, 92, 0.6);
-  border: 1px solid var(--The-Wild-Apothecary);
-  border-radius: var(--spacing-md);
-  z-index: 3;
-  bottom: 20dvh;
-  color: var(--Cupids-eye);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-}
-
-/* 
-   ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-   ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-
-     10. Taxonomies
-     
-   ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-   ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
- */
-
-.single-projet__taxonomy-item {
-  margin-top: var(--spacing-md);
-  display: inline-block;
+.button {
+  padding: var(--spacing-sm) var(--spacing-xxxxl);
   background-color: var(--The-Wild-Apothecary);
-  padding: var(--spacing-sm) var(--spacing-md);
-  border-radius: var(--spacing-xs);
+  border-radius: var(--spacing-xxl);
   color: var(--Cupids-eye);
   text-decoration: none;
-  transition: background-color 0.3s ease;
-  border: 1px solid var(--Cupids-eye);
+  transition: 0.4s ease;
+  text-align: center;
+  display: block;
+
+}
+.button:hover {
+  background-color: var(--Aqua-Mirage);
+  color: var(--Radiant-Orchid);
 }
 
-.single-projet__taxonomy-item:hover {
-  background-color: var(--Crimson-Shadow);
-  border: 1px solid var(--The-Wild-Apothecary);
+span {
   color: var(--The-Wild-Apothecary);
 }
 
-.single-projet__taxonomy-client {
-  display: flex;
-  gap: 30px;
-  justify-content: space-between;
-}
 
-.single-projet__commanditaire,
-.single-projet__tuteur,
-.single-projet__deadline {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: var(--spacing-md);
-}
-
-/* 
-   ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-   ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-
-     11. Conteneurs Flexibles (Flex Containers)
-     
-   ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-   ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
- */
-
-.single-projet__info-container {
-  display: flex;
-  gap: var(--spacing-lg);
-  justify-content: space-between;
-  margin-right: var(--spacing-md);
-  margin-left: var(--spacing-md);
-  align-items: center;
-}
-
-/* 
-   ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-   ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-
-     12. Éléments de Projet et d'Équipe (Project and Team Elements)
-     
-   ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-   ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
- */
-
-.project,
-.select-project {
-  position: relative;
-}
-
-.select-project {
+.legal__title {
+  margin-top: 18vh;
   grid-column: span 12;
-  margin-bottom: var(--spacing-xl);
 }
-
-.projet__taxonomy-nature {
-  position: absolute;
-  bottom: 7%;
-  left: var(--spacing-xl);
-  color: var(--Cupids-eye);
-  font-size: 1.2rem;
-  z-index: 2;
-  width: 50%;
-}
-
-.project__teams {
-  position: absolute;
-  top: 0;
-  right: 0;
-  background-color: rgba(1, 60, 92, 0.6);
-  border: 1px solid var(--The-Wild-Apothecary);
-  border-radius: var(--spacing-md);
-  z-index: 3;
-  color: var(--Cupids-eye);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  width: 40%;
-  margin: 14px;
-  margin-left: 0;
-  max-height: 90%;
-  overflow-y: auto;
-  padding: var(--spacing-sm);
-}
-
-.project__teams-list {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-md);
-  padding-left: var(--spacing-sm);
-  padding-right: var(--spacing-sm);
-  list-style: none;
-  text-decoration: none;
-}
-
-.project__teams-list a {
-  text-decoration: none;
-}
-
-.project__teams-item {
-  display: flex;
-  gap: var(--spacing-md);
-  align-items: center;
-  background-color: var(--Cupids-eye);
-  padding: var(--spacing-sm) var(--spacing-md);
-  border-radius: var(--spacing-sm);
-  justify-content: space-between;
-  transition: background-color 0.3s ease;
-}
-
-.project__teams-item:hover {
-  background-color: #1e1e1e;
-  color: var(--Cupids-eye);
-  font-weight: var(--font-weight-bold);
-}
-
-.project__team-members {
-  position: relative;
-  display: flex;
-}
-
-.project__team-member img {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-  object-fit: cover;
-  margin-left: -10px;
-  transition: transform 0.3s ease;
-  z-index: 1;
-}
-
-.project__team-member:hover {
-  transform: scale(1.1);
-  z-index: 2;
-}
-
-/* 
-   ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-   ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-
-     13. Équipe (Team Elements)
-     
-   ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-   ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
- */
-
-.equipe:nth-child(odd) {
-  grid-column: span 5;
-  margin-top: var(--spacing-xxl);
-  background-color: var(--Cupids-eye);
-  position: relative;
-  border-radius: var(--spacing-md);
-  width: 100%;
-}
-
-.equipe:nth-child(even) {
-  grid-column: 7 / span 5;
-  margin-top: var(--spacing-xxl);
-  background-color: var(--Cupids-eye);
-  position: relative;
-  border-radius: var(--spacing-md);
-  width: 100%;
-}
-
-.equipe:nth-child(1),
-.equipe:nth-child(2) {
-  margin-top: 18dvh;
-}
-
-.equipe__thumbnail {
-  margin-top: var(--spacing-md);
-  margin-left: var(--spacing-md);
-  margin-right: var(--spacing-md);
-  height: 26dvh;
-  width: 95%;
-  background: url("../../../assets/images/Wireframe-1.png");
-  background-size: cover;
-  background-position: center;
-  border-radius: var(--spacing-sm);
-}
-
-.equipe__thumbnail img {
-  width: 100%;
-  height: 26dvh;
-  object-fit: cover;
-  border-radius: var(--spacing-sm);
-}
-
-.equipe__title {
-  margin: var(--spacing-md);
-}
-
-.equipe__etudiants {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  margin-left: var(--spacing-sm);
-  margin-right: var(--spacing-sm);
-  margin-bottom: 70px;
-}
-
-.equipe__etudiants-list {
-  margin-left: var(--spacing-xs);
-  margin-right: var(--spacing-xs);
-  list-style: none;
-  background-color: var(--Crimson-Shadow);
-  padding: 12px;
-  border-radius: var(--spacing-sm);
-  color: var(--Cupids-eye);
-  margin-bottom: 0;
-}
-
-.equipe__etudiants-item {
-  display: flex;
-  gap: var(--spacing-md);
-  align-items: center;
-}
-
-.equipe__etudiants-item img {
-  border-radius: var(--spacing-xs);
-}
-
-.equipe .project-list__button {
-  width: calc(100% - 4 * var(--spacing-md));
-  bottom: var(--spacing-md);
-  right: var(--spacing-md);
-}
-
-.equipe:last-child {
-  margin-bottom: 10dvh;
-}
-
-/* 
-   ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-   ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-
-     14. Conteneur Principal du Projet (Main Project Container)
-     
-   ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-   ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
- */
-
-.single-projet-team {
-  padding: var(--spacing-lg);
-  position: relative;
-  grid-column: span 11;
-  padding-top: 20dvh;
-}
-
-.single-projet-team__thumbnail {
-  grid-column: 1 / span 6;
-  grid-row: span 2;
-  width: 100%;
-  height: auto;
-  overflow: hidden;
-  background: url("../../../assets/images/Wireframe-1.png");
-  background-size: cover;
-  background-position: center;
-  border-radius: var(--spacing-sm);
-}
-
-.single-projet-team__thumbnail img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: var(--spacing-sm);
-}
-
-.single-projet-team__title {
-  grid-column: 7 / span 5;
-  font-size: 2rem;
-  font-weight: var(--font-weight-bold);
-  margin-bottom: 0;
-  margin-top: var(--spacing-sm);
-}
-
-.single-projet-team .equipe__etudiants {
-  grid-column: 7 / span 5;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin: 0;
-}
-
-.single-projet-team .equipe__etudiants .equipe__etudiants-list {
-  margin: 0;
-  margin-bottom: 12px;
-}
-
-.single-projet-team .equipe__etudiants .equipe__etudiants-list:last-child {
-  margin: 0;
-}
-
-.single-projet-team__equipe {
-  grid-column: span 11;
-}
-
-.single-projet-team__equipe-title {
-  margin-bottom: var(--spacing-xl);
-  margin-top: 0;
-}
-
-.single-projet-team__equipe-description {
-  position: relative;
-  padding: var(--spacing-lg);
-  margin-bottom: var(--spacing-xxl);
-  grid-column: span 11;
-}
-
-.single-projet-team__equipe-description::before,
-.single-projet-team__equipe-description::after {
-  content: "";
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  border: 2px solid var(--Crimson-Shadow);
-  background-color: transparent;
-}
-
-.single-projet-team__equipe-description::before {
-  top: -10px;
-  left: -10px;
-  border-right: none;
-  border-bottom: none;
-}
-
-.single-projet-team__equipe-description::after {
-  bottom: -10px;
-  right: -10px;
-  border-left: none;
-  border-top: none;
-}
-
-/* 
-   ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-   ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-
-     15. Vœux de Projet (Project Wishes)
-     
-   ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-   ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
- */
-
-.single-projet-team__voeux-title {
-  margin-top: var(--spacing-xl);
-  margin-bottom: var(--spacing-md);
-}
-
-.single-projet-team__voeux-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: var(--spacing-md);
-}
-
-.single-projet-team__voeux-item {
-  width: 100%;
-  background-color: var(--Cupids-eye);
-  border-radius: var(--spacing-md);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  transition: background-color 0.3s ease;
-}
-
-.single-projet-team__voeux-item:hover {
-  background-color: var(--The-Wild-Apothecary);
-}
-
-.single-projet-team__voeux-image {
-  width: 100%;
-  height: 30dvh; /* Fixer la hauteur de l'image */
-  overflow: hidden;
-  border-radius: var(--spacing-md) var(--spacing-md) 0 0; /* Coins arrondis uniquement en haut */
-  position: relative; /* Positionnement relatif pour contenir l'image */
-}
-
-.single-projet-team__voeux-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* S'assurer que l'image occupe bien tout l'espace */
-  object-position: 50% 70%;
-  display: block; /* Enlever les espaces créés par les images inline */
-  transition: transform 0.3s ease; /* Transition pour l'effet de zoom */
-}
-
-.single-projet-team__voeux-item:hover .single-projet-team__voeux-image img {
-  transform: scale(1.1); /* Zoomer l'image au survol */
-}
-
-.single-projet-team__voeux-text {
-  display: flex;
-  align-items: center;
-  padding: 8px;
-  background-color: var(--Crimson-Shadow); /* Fond sombre */
-  color: var(--Cupids-eye);
-  border-bottom-left-radius: var(--spacing-md);
-  border-bottom-right-radius: var(--spacing-md);
-  margin-top: 0; /* Enlever l'espace entre l'image et la section de texte */
-  transition: background-color 0.3s ease; /* Transition pour la couleur de fond */
-}
-
-.single-projet-team__voeux-item:hover .single-projet-team__voeux-text {
-  background-color: var(--The-Wild-Apothecary); /* Changer le fond au survol */
-}
-
-.single-projet-team__voeux-order {
-  padding: var(--spacing-xs);
-  background-color: var(--Cupids-eye); /* Couleur de fond par défaut */
-  color: var(--Crimson-Shadow);
-  font-weight: var(--font-weight-bold);
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: var(--spacing-md);
-  margin-left: var(--spacing-xs);
-  margin-top: var(--spacing-xs);
-  margin-bottom: var(--spacing-xs);
-  transition: background-color 0.3s ease; /* Transition pour la couleur de fond */
-}
-
-.single-projet-team__voeux-item:hover .single-projet-team__voeux-order {
-  background-color: #1e1e1e; /* Couleur de fond au survol */
-  color: var(--Cupids-eye);
-}
-
-.single-projet-team__voeux-name {
-  font-size: 1.2rem;
-  font-weight: var(--font-weight-bold);
-  margin: 0;
-  padding-left: var(--spacing-xs);
-  flex-grow: 1;
-}
-
-.single-projet-team__voeux-link {
-  text-decoration: none;
+.legal__content {
+  grid-column: span 12;
+  margin-bottom: var(--spacing-xxxxl);
 }

@@ -71,6 +71,14 @@ if (!is_user_logged_in()) {
                     <label class="form__label" for="user_password">Mot de passe</label>
                     <input class="form__input" type="password" name="user_password" id="user_password" required />
                 </div>
+                <p class="terms" class="form__terms">
+            <input type="checkbox" id="terms" required>
+            <label for="terms">
+                <small>
+                <?php _e("En rejoignant UC Arena, tu acceptes nos  <a href='" . esc_url($legal_url) . "'>conditions d'utilisation</a> et notre <a href='" . esc_url($legal_url) . "'>politique de confidentialité</a>", 'text-domain'); ?>
+                </small>
+            </label>
+        </p>
                 <div class="form__actions">
                     <input class="form__submit" type="submit" name="submit_registration" value="S'inscrire" />
                 </div>
